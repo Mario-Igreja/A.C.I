@@ -1,2 +1,2 @@
 # A.C.I
- Analisador de Currículos Inteligentes
+ Analisador de Currículos Inteligente
