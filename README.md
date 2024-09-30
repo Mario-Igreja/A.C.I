@@ -74,6 +74,8 @@ A aplicação utiliza um banco de dados para armazenar informações de currícu
  **Integrantes do Grupo:**
 
 > **20221425** – Alfredo Bumba
+
 > **20220812** – Leonardo Alves
+
 > **20220672** - Mário Igreja
 
