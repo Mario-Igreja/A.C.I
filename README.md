@@ -12,7 +12,6 @@
 - [Objetivos](#objetivos)
   - [Geral](#geral)
   - [Específicos](#específicos)
-- [Sistemas de Informação Geográficos](#sistemas-de-informação-geográficos)
 - [Especificações Técnicas](#especificações-técnicas)
   - [O Web site (Front-End)](#o-web-site-front-end)
   - [O servidor Web (Back-End)](#o-servidor-web-back-end)
@@ -42,10 +41,6 @@ O objetivo principal deste projeto é desenvolver uma ferramenta que permita a a
 - Desenvolver uma interface amigável para a comparação de currículos.
 - Utilizar IA para fornecer análises críticas e gerar uma pontuação de adequação com base em uma vaga específica.
 - Gerar relatórios descritivos que possam ser utilizados pelos recrutadores durante a seleção.
-
-## Sistemas de Informação Geográficos
-
-Nesta aplicação, não há diretamente o uso de um Sistema de Informação Geográfico (SIG), mas o conceito pode ser estendido para análise de distribuição geográfica de candidatos em futuras versões.
 
 ## Especificações Técnicas
 
