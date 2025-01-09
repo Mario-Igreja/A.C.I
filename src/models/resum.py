@@ -7,3 +7,4 @@ class Resum(BaseModel):
     content: str
     opnion: str
     file: str
+    score: float  # Adicionando pontuação no arquivo também, se necessário

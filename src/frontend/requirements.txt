@@ -1,0 +1,5 @@
+streamlit==1.23.1
+requests
+Flask==2.1.2
+werkzeug==2.0.3
+streamlit-aggrid==1.0.5

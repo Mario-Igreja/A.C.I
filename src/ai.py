@@ -1,12 +1,14 @@
 import re
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
+import os
+import requests
 
 # Carregar as variáveis de ambiente do arquivo .env
 load_dotenv()
 
 class GroqClient:
-    def __init__(self, model_id="llama-3.1-70b-versatile"):
+    def __init__(self, model_id="llama-3.3-70b-versatile"):
         # Inicializar o modelo de linguagem com o ID especificado
         self.model_id = model_id
         self.client = ChatGroq(model=model_id)
@@ -31,7 +33,7 @@ class GroqClient:
 
             Por favor, gere um resumo do currículo fornecido, formatado em Markdown, seguindo rigorosamente o modelo abaixo. **Não adicione seções extras, tabelas ou qualquer outro tipo de formatação diferente da especificada.** Preencha cada seção com as informações relevantes, garantindo que o resumo seja preciso e focado.
 
-            **Formato de Output Esperado:**
+            **Formato de Output Esperado:** 
 
             ```markdown
             ## Nome Completo
@@ -84,7 +86,7 @@ class GroqClient:
             ```
             Pontuação Final: x.x
             ```
-            
+
             **Atenção:** Seja rigoroso ao atribuir as notas. A nota máxima é 10.0, e o output deve conter apenas "Pontuação Final: x.x".        
         '''
         
@@ -150,6 +152,7 @@ class GroqClient:
             
             Você deve devolver essa analise critica formatada como se fosse um relatorio analitico do curriculum com a vaga, deve estar formatado com titulos grandes em destaques
         '''
+        
         # Gerar a resposta usando o modelo de linguagem
         result_raw = self.generate_response(prompt=prompt)
         result = result_raw

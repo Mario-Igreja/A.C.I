@@ -1,0 +1,83 @@
+services:
+  middleware:
+    build:
+      context: ./middleware
+    volumes:
+      - ./backend/tinydb:/app/tinydb
+      - ./curriculos:/app/curriculos  # Mapeamento do diretório dos currículos
+    networks:
+      - app_network
+    restart: always
+
+  backend1:
+    build:
+      context: ./backend
+    environment:
+      - DB_FILE=/app/tinydb/db1.json
+      - API_URL=http://middleware:8000
+    volumes:
+      - ./backend/tinydb:/app/tinydb
+      - ./curriculos:/app/curriculos  # Mapeamento do diretório dos currículos
+    networks:
+      - app_network
+    restart: always
+
+  backend2:
+    build:
+      context: ./backend
+    environment:
+      - DB_FILE=/app/tinydb/db2.json
+      - API_URL=http://middleware:8000
+    volumes:
+      - ./backend/tinydb:/app/tinydb
+      - ./curriculos:/app/curriculos  # Mapeamento do diretório dos currículos
+    networks:
+      - app_network
+    restart: always
+
+  frontend1:
+    build:
+      context: ./frontend
+    networks:
+      - app_network
+    ports:
+      - "8501:8501"
+    restart: always
+
+  frontend2:
+    build:
+      context: ./frontend
+    networks:
+      - app_network
+    ports:
+      - "8503:8503"
+    restart: always
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src/nginx/nginx.conf:/nginx/nginx.conf
+    depends_on:
+      - backend1
+      - backend2
+      - frontend1
+      - frontend2
+    networks:
+      - app_network
+    restart: always
+
+  sync:
+    build:
+      context: ./sync
+    volumes:
+      - ./backend/tinydb:/app/tinydb
+      - ./curriculos:/app/curriculos  # Mapeamento do diretório dos currículos
+    networks:
+      - app_network
+    restart: always
+
+networks:
+  app_network:
+    driver: bridge

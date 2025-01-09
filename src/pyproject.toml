@@ -4,6 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Davidson Delo  <126816671+alfredobumba@users.noreply.github.com>"]
 readme = "README.md"
+package-mode = false  # Mantenha o `package-mode` aqui
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -14,8 +15,6 @@ tinydb = "^4.8.2"
 pydantic = "^2.9.2"
 sqlalchemy = "^2.0.36"
 mysql-connector-python = "^9.1.0"
-streamlit = "^1.39.0"
-streamlit-aggrid = "^1.0.5"
 pandas = "^2.2.3"
 langchain-groq = "^0.2.0"
 python-dotenv = "^1.0.1"
@@ -23,6 +22,12 @@ pymupdf = "^1.24.12"
 matplotlib = "^3.9.2"
 plotly = "^5.24.1"
 chardet = "^5.2.0"
+python-multipart = "^0.0.17"
+langsmith = "^0.1.143"
+fastapi = "^0.115.5"
+pypdf2 = "^3.0.1"
+streamlit-aggrid = "^1.0.5"
+streamlit = "^1.41.1"
 
 
 [build-system]

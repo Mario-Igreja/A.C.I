@@ -32,6 +32,33 @@ Interesse por Programação e Tecnologia (fique tranquilo, NÃO é necessário s
 Experiência como Gestor Comercial no nicho de Tecnologia em geral, Programação ou Data Science, proporcionando uma compreensão mais profunda do nosso público-alvo
 '''
 
+# Definir informações da vaga para Engenheiro de Software
+name = 'Vaga de Engenheiro de Software'
+
+activities = '''
+Desenvolver, testar e manter sistemas e aplicações de software.
+Participar do ciclo de vida completo do desenvolvimento de software, desde a análise de requisitos até a implementação.
+Colaborar com equipes multidisciplinares para solucionar problemas técnicos complexos.
+Realizar revisões de código e implementar boas práticas de programação.
+Documentar processos e sistemas desenvolvidos.
+'''
+
+prerequisites = '''
+Graduação em Ciência da Computação, Engenharia de Software ou áreas relacionadas.
+Experiência comprovada em desenvolvimento de software utilizando linguagens como Python, Java ou C++.
+Conhecimento em bancos de dados relacionais e não-relacionais.
+Habilidade para trabalhar com metodologias ágeis, como Scrum ou Kanban.
+Proatividade na solução de problemas e capacidade de trabalhar em equipe.
+'''
+
+differentials = '''
+Conhecimento em DevOps e ferramentas de CI/CD.
+Experiência em desenvolvimento de software para aplicações móveis ou sistemas embarcados.
+Certificações em Cloud Computing, como AWS ou Azure.
+Familiaridade com segurança cibernética e práticas de codificação segura.
+Interesse em tecnologias emergentes, como Machine Learning e Blockchain.
+'''
+
 # Verificar se as informações da vaga estão completas
 if not all([name, activities, prerequisites, differentials]):
     print("Erro: Todos os campos da vaga devem ser preenchidos.")
